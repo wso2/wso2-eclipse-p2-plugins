@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
         <groupId>org.wso2</groupId>
@@ -12,7 +10,7 @@
     <groupId>org.wso2.eclipse.equinox</groupId>
     <artifactId>eclipse-p2-plugins</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Eclipse P2 Plugins Aggregator Pom</name>
     <url>http://wso2.org</url>
 
@@ -134,7 +132,7 @@
         <url>https://github.com/wso2/wso2-eclipse-p2-plugins.git</url>
         <developerConnection>scm:git:https://github.com/wso2/wso2-eclipse-p2-plugins.git</developerConnection>
         <connection>scm:git:https://github.com/wso2/wso2-eclipse-p2-plugins.git</connection>
-        <tag>HEAD</tag>
+        <tag>v1.0.0</tag>
     </scm>
 
     <properties>
