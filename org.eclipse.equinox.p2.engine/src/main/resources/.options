@@ -1,0 +1,5 @@
+org.eclipse.equinox.p2.engine/profileregistry/debug = false
+org.eclipse.equinox.p2.engine/engine/debug = false
+org.eclipse.equinox.p2.engine/enginesession/debug = false
+org.eclipse.equinox.p2.engine/certificatechecker/unsigned = false
+org.eclipse.equinox.p2.engine/certificatechecker/untrusted = false

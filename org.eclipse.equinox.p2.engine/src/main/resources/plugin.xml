@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+<extension-point id="touchpoints"  name="Touchpoints" schema="schema/touchpoints.exsd"/>
+
+<extension-point id="actions" name="Actions" schema="schema/actions.exsd"/>
+ <extension
+       id="metadataRepository"
+       point="org.eclipse.equinox.p2.metadata.repository.metadataRepositories">
+    <factory
+          class="org.eclipse.equinox.internal.p2.engine.ProfileMetadataRepositoryFactory">
+    </factory>
+    <filter
+          suffix="profile">
+    </filter>
+ </extension>
+
+	<extension id="preferences" point="org.eclipse.equinox.preferences.preferences" name="%preferencesExtPtName">
+		<scope name="profile" class="org.eclipse.equinox.internal.p2.engine.ProfilePreferences"/>
+	</extension>
+	
+</plugin>
