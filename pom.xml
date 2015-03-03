@@ -10,7 +10,7 @@
     <groupId>org.wso2.eclipse.equinox</groupId>
     <artifactId>eclipse-p2-plugins</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Eclipse P2 Plugins Aggregator Pom</name>
     <url>http://wso2.org</url>
 
@@ -132,7 +132,7 @@
         <url>https://github.com/wso2/wso2-eclipse-p2-plugins.git</url>
         <developerConnection>scm:git:https://github.com/wso2/wso2-eclipse-p2-plugins.git</developerConnection>
         <connection>scm:git:https://github.com/wso2/wso2-eclipse-p2-plugins.git</connection>
-        <tag>v1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
