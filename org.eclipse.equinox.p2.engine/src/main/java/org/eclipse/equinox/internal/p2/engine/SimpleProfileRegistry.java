@@ -161,10 +161,17 @@ public class SimpleProfileRegistry implements IProfileRegistry, IAgentService {
 			changed = true;
 		}
 		String propCache = selfProfile.getProperty(IProfile.PROP_CACHE);
-		if (propCache != null && !location.equals(new File(propCache))) {
-			selfProfile.setProperty(IProfile.PROP_CACHE, location.getAbsolutePath());
+		// Start of WSO2 Patch
+		String carbonHome = System.getProperty("carbon.home");
+		String cacheLocation = carbonHome + File.separator + "repository" + File.separator + "components";
+		// Here we are setting the bundle pool location as $CARBON_HOME/repository/components. Changing the property in
+		// ProfileChangeRequest won't work, since this case(original) always set the cache.location to be install folder.
+		// see https://bugs.eclipse.org/bugs/show_bug.cgi?id=342156
+		if (propCache != null && !cacheLocation.trim().equals(propCache.trim())) {
+			selfProfile.setProperty(IProfile.PROP_CACHE, cacheLocation);
 			changed = true;
 		}
+		// End of WSO2 Patch
 		if (DebugHelper.DEBUG_PROFILE_REGISTRY)
 			DebugHelper.debug(PROFILE_REGISTRY, "SimpleProfileRegistry.updateRoamingProfile(changed=" + changed + ')'); //$NON-NLS-1$
 		return changed;
